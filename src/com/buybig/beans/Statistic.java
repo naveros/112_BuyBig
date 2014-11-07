@@ -16,4 +16,5 @@ public class Statistic {
 	public void setNbSessions(int nbSessions) {
 		this.nbSessions = nbSessions;
 	}
+	//Test
 }

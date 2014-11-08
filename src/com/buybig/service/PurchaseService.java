@@ -22,7 +22,7 @@ import com.buybig.exceptions.InvalidSortByPropertyException;
 import com.buybig.exceptions.MissingDTOException;
 import com.buybig.exceptions.ServiceException;
 
-public class PurchaseService/* extends Service */{ // TODO Service class
+public class PurchaseService {
 
 	private PurchaseDAO purchaseDAO;
 
@@ -122,20 +122,19 @@ public class PurchaseService/* extends Service */{ // TODO Service class
 		}
 	}
 
-	public List<Purchase> findByDatePurchase(Session session,
+	public List<Purchase> findByPurchaseDate(Session session,
 			Timestamp datePurchase, String sortByPropertyName)
 			throws InvalidHibernateSessionException, InvalidCriterionException,
 			InvalidSortByPropertyException, ServiceException,
 			InvalidCriterionValueException {
 		try {
-			return getpurchaseDAO().findByDatePurchase(session, datePurchase,
+			return getpurchaseDAO().findByPurchaseDate(session, datePurchase,
 					sortByPropertyName);
 		} catch (DAOException daoException) {
 			throw new ServiceException(daoException);
 		}
 	}
 
-	// sell,: c'était "commencer" dans biblio
 	public void sell(Session session, Purchase purchase)
 			throws InvalidHibernateSessionException, InvalidDTOException,
 			InvalidPrimaryKeyException, MissingDTOException,

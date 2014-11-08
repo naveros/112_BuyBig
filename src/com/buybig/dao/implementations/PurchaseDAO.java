@@ -41,7 +41,7 @@ public class PurchaseDAO extends DAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	public List<Purchase> findByDatePurchase(Session session,
+	public List<Purchase> findByPurchaseDate(Session session,
 			Timestamp datePurchase, String sortByPropertyName)
 			throws InvalidHibernateSessionException, InvalidCriterionException,
 			InvalidSortByPropertyException, DAOException,

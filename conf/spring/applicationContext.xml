@@ -128,7 +128,7 @@
   <bean name="userDAO"
         parent="transactionProxy">
         <property name="target">
-                  <bean class="com.buybig.dao.implementations.userDAO">
+                  <bean class="com.buybig.dao.implementations.UserDAO">
                         <constructor-arg>
                           <value>com.buybig.dto.User</value>
                         </constructor-arg>
@@ -212,6 +212,18 @@
                   </bean>
         </property>
   </bean>
+  
+  
+    <!-- ========== beans util ======================================================= -->
+    
+      <bean name="statistic"
+        parent="transactionProxy">
+        <property name="target">
+                  <bean class="com.buybig.beans.Statistic">
+                  </bean>
+        </property>
+  </bean>
+    
 
  
 </beans>

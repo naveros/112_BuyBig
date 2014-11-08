@@ -6,7 +6,7 @@
           "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-  <class name="com.buybig.dto.Order" table="ORDER">
+  <class name="com.buybig.dto.Order" table="ORDERS">
          <id name="idOrder"
              type="string">
              <column name="IDORDER">

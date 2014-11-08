@@ -16,9 +16,9 @@
              </generator>
          </id>
 
-         <property name="dateOrder"
+         <property name="dateAdded"
                    type="timestamp">
-                   <column name="DATEORDER">
+                   <column name="DATEADDED">
                    </column>
          </property>
          

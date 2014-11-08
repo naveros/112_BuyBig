@@ -5,65 +5,49 @@
           "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
           "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-  <class name="com.buybig.dto.Book"
-         table="BOOK">
-         
-         <id name="idbook"
-             type="string">
-             <column name="IDBOOK">
-             </column>
-             <generator class="sequence">
-                        <param name="sequence">SEQ_ID_BOOK</param>
-             </generator>
-         </id>
-         <property name="title"
-                   type="string"
-                   length="100">
-                   <column name="TITLE">
-                   </column>
-         </property>
-         <property name="author"
-                   type="string"
-                   length="100">
-                   <column name="AUTHOR">
-                   </column>
-         </property>
-          <property name="isbn"
-                   type="string"
-                   length="100">
-                   <column name="ISBN">
-                   </column>
-         </property>   
-          <property name="price"
-                   type="string"
-                   length="100">
-                   <column name="PRICE">
-                   </column>
-         </property>       
-          <property name="category"
-                   type="string"
-                   length="100">
-                   <column name="CATEGORY">
-                   </column>
-         </property>       
+	<class name="com.buybig.dto.Book" table="BOOK">
 
-         <set name="purchases"
-              order-by="PURCHASEDATE ASC"
-              cascade="all">
-              <key>
-                <column name="IDBOOK">
-                </column>
-              </key>
-              <one-to-many class="com.buybig.dto.Purchase"/>
-         </set>
-         <set name="orders"
-              order-by="DATEADDED ASC"
-              cascade="all">
-              <key>
-                <column name="IDBOOK">
-                </column>
-              </key>
-              <one-to-many class="com.buybig.dto.Order"/>
-         </set>
-  </class>
+		<id name="idbook" type="string">
+			<column name="IDBOOK">
+			</column>
+			<generator class="sequence">
+				<param name="sequence">SEQ_ID_BOOK</param>
+			</generator>
+		</id>
+		<property name="title" type="string" length="100">
+			<column name="TITLE">
+			</column>
+		</property>
+		<property name="author" type="string" length="100">
+			<column name="AUTHOR">
+			</column>
+		</property>
+		<property name="isbn" type="string" length="100">
+			<column name="ISBN">
+			</column>
+		</property>
+		<property name="price" type="string" length="100">
+			<column name="PRICE">
+			</column>
+		</property>
+		<property name="category" type="string" length="100">
+			<column name="CATEGORY">
+			</column>
+		</property>
+
+		<set name="purchases" order-by="PURCHASEDATE ASC" cascade="all">
+			<key>
+				<column name="IDBOOK">
+				</column>
+			</key>
+			<one-to-many class="com.buybig.dto.Purchase" />
+		</set>
+		<set name="orders" order-by="DATEADDED ASC" cascade="all">
+			<key>
+				<column name="IDBOOK">
+				</column>
+			</key>
+			<one-to-many class="com.buybig.dto.Order" />
+		</set>
+	</class>
 </hibernate-mapping>

@@ -1,4 +1,4 @@
-package com.buybig.dao;
+package com.buybig.dao.implementations;
 
 import java.io.Serializable;
 import java.util.Collections;

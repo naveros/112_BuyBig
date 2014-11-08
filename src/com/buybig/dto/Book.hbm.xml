@@ -40,6 +40,12 @@
                    <column name="PRICE">
                    </column>
          </property>       
+          <property name="category"
+                   type="string"
+                   length="100">
+                   <column name="CATEGORY">
+                   </column>
+         </property>       
 
          <set name="purchases"
               order-by="PURCHASEDATE ASC"

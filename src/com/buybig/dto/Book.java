@@ -9,6 +9,7 @@ public class Book extends DTO{
 	private String author;
 	private String isbn;
 	private double price;
+	private String category;
 	Set<Purchase> purchases;
 	Set<Order> orders;
 	
@@ -18,13 +19,13 @@ public class Book extends DTO{
 	public String getIdbook() {
 		return idbook;
 	}
-
+	
 
 	public void setIdbook(String idbook) {
 		this.idbook = idbook;
 	}
 
-
+		
 	public String getIsbn() {
 		return isbn;
 	}
@@ -82,6 +83,12 @@ public class Book extends DTO{
 
 	public void setOrders(Set<Order> orders) {
 		this.orders = orders;
+	}
+	public String getCategory() {
+		return category;
+	}
+	public void setCategory(String category) {
+		this.category = category;
 	}
 
 }

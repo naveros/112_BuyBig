@@ -7,7 +7,7 @@ public class User extends DTO{
 
 	public final static String USERNAME_USER_COLUMN_NAME = "username";
 	
-	private int idUser;
+	private String idUser;
 	private String userName;
 	private String lastName;
 	private String firstName;
@@ -76,11 +76,11 @@ public class User extends DTO{
 		this.cart = cart;
 	}
 
-	public int getIdUser() {
+	public String getIdUser() {
 		return idUser;
 	}
 
-	public void setIdUser(int idUser) {
+	public void setIdUser(String idUser) {
 		this.idUser = idUser;
 	}
 

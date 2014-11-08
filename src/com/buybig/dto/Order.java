@@ -2,6 +2,7 @@ package com.buybig.dto;
 
 public class Order {
 
+	private String idOrder;
 	private Book book; 
 	private User user;
 	
@@ -25,5 +26,15 @@ public class Order {
 
 	public void setUser(User user) {
 		this.user = user;
+	}
+
+
+	public String getIdOrder() {
+		return idOrder;
+	}
+
+
+	public void setIdOrder(String idOrder) {
+		this.idOrder = idOrder;
 	}
 }

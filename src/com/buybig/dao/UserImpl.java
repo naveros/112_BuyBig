@@ -1,4 +1,4 @@
-package com.buybig.dao.Impl;
+package com.buybig.dao;
 
 public class UserImpl {
 

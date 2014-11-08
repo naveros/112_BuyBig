@@ -11,8 +11,6 @@ import org.hibernate.Session;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 
-import util.DateImproved;
-
 import com.buybig.dto.DTO;
 import com.buybig.exceptions.DAOException;
 import com.buybig.exceptions.InvalidCriterionException;
@@ -22,6 +20,7 @@ import com.buybig.exceptions.InvalidDTOException;
 import com.buybig.exceptions.InvalidHibernateSessionException;
 import com.buybig.exceptions.InvalidPrimaryKeyException;
 import com.buybig.exceptions.InvalidSortByPropertyException;
+import com.buybig.util.DateImproved;
 
 public class DAO {
     private Class<?> dtoClass;

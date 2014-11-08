@@ -3,8 +3,10 @@ package com.buybig.dto;
 import java.util.Set;
 
 public class Book extends DTO {
-
-	private String idbook;
+	private static final long serialVersionUID = 1L;
+	
+	public final static String TITLE_BOOK_COLUMN_NAME = "title";
+	private String idBook;
 	private String title;
 	private String author;
 	private String isbn;
@@ -17,12 +19,12 @@ public class Book extends DTO {
 		super();
 	}
 
-	public String getIdbook() {
-		return idbook;
+	public String getIdBook() {
+		return idBook;
 	}
 
-	public void setIdbook(String idbook) {
-		this.idbook = idbook;
+	public void setIdbook(String idBook) {
+		this.idBook = idBook;
 	}
 
 	public String getIsbn() {

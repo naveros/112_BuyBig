@@ -3,10 +3,11 @@ package com.buybig.dto;
 import java.sql.Timestamp;
 import java.util.Set;
 
-public class User extends DTO{
+public class User extends DTO {
+	private static final long serialVersionUID = 1L;
 
 	public final static String USERNAME_USER_COLUMN_NAME = "username";
-	
+
 	private String idUser;
 	private String userName;
 	private String lastName;
@@ -83,7 +84,5 @@ public class User extends DTO{
 	public void setIdUser(String idUser) {
 		this.idUser = idUser;
 	}
-
-
 
 }

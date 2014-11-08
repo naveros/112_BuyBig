@@ -2,19 +2,18 @@ package com.buybig.dto;
 
 import java.sql.Timestamp;
 
-public class Purchase extends DTO{
+public class Purchase extends DTO {
+	private static final long serialVersionUID = 1L;
 
 	private String idPurchase;
-	
-
 	private Timestamp purchaseDate;
 	private User user;
 	private Book book;
-	
-	public Purchase(){
+
+	public Purchase() {
 		super();
 	}
-	
+
 	public String getIdPurchase() {
 		return idPurchase;
 	}
@@ -22,6 +21,7 @@ public class Purchase extends DTO{
 	public void setIdPurchase(String idPurchase) {
 		this.idPurchase = idPurchase;
 	}
+
 	public Timestamp getPurchaseDate() {
 		return purchaseDate;
 	}
@@ -45,5 +45,5 @@ public class Purchase extends DTO{
 	public void setUser(User user) {
 		this.user = user;
 	}
-	
+
 }

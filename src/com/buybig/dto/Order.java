@@ -3,7 +3,8 @@ package com.buybig.dto;
 import java.sql.Timestamp;
 
 public class Order extends DTO{
-
+	private static final long serialVersionUID = 1L;
+	
 	private String idOrder;
 	private Timestamp dateAdded;
 	private User user;

@@ -24,15 +24,15 @@ public class UserService {
 		if (userDAO == null) {
 			throw new InvalidDAOException("Le DAO de user ne peut être null");
 		}
-		setMembreDAO(userDAO);
+		setUserDAO(userDAO);
 	}
 
 	private UserDAO getUserDAO() {
 		return userDAO;
 	}
 
-	private void setMembreDAO(UserDAO membreDAO) {
-		this.userDAO = membreDAO;
+	private void setUserDAO(UserDAO userDAO) {
+		this.userDAO = userDAO;
 	}
 
 	public void addUser(Session session, User user)
@@ -93,7 +93,7 @@ public class UserService {
 		addUser(session, user);
 	}
 
-	public void desinscrire(Session session, User user)
+	public void unsubscribe(Session session, User user)
 			throws InvalidHibernateSessionException, InvalidDTOException,
 			InvalidDTOClassException, InvalidPrimaryKeyException,
 			MissingDTOException,

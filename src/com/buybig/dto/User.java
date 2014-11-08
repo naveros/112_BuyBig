@@ -5,6 +5,8 @@ import java.util.Set;
 
 public class User extends DTO{
 
+	public final static String USERNAME_USER_COLUMN_NAME = "username";
+	
 	private int idUser;
 	private String userName;
 	private String lastName;

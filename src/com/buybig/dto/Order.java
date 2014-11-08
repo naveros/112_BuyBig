@@ -2,7 +2,7 @@ package com.buybig.dto;
 
 import java.sql.Timestamp;
 
-public class Order {
+public class Order extends DTO{
 
 	private String idOrder;
 	private Timestamp dateAdded;

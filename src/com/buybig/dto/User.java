@@ -3,7 +3,7 @@ package com.buybig.dto;
 import java.sql.Timestamp;
 import java.util.Set;
 
-public class User {
+public class User extends DTO{
 
 	private int idUser;
 	private String userName;
@@ -15,6 +15,7 @@ public class User {
 	private Set<Order> cart;
 
 	public User() {
+		super();
 	}
 
 	public String getUserName() {

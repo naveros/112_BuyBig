@@ -2,7 +2,7 @@ package com.buybig.dto;
 
 import java.util.Set;
 
-public class Book {
+public class Book extends DTO{
 	
 	private String idbook;	
 	private String title;
@@ -13,8 +13,7 @@ public class Book {
 	Set<Order> orders;
 	
 	public Book(){
-		
-		
+		super();		
 	}
 	public String getIdbook() {
 		return idbook;

@@ -184,15 +184,6 @@
                         <constructor-arg>
                           <ref bean="purchaseDAO"/>
                         </constructor-arg>
-                        <constructor-arg>
-                          <ref bean="orderDAO"/>
-                        </constructor-arg>
-                         <constructor-arg>
-                          <ref bean="userDAO"/>
-                        </constructor-arg>
-                          <constructor-arg>
-                          <ref bean="userDAO"/>
-                        </constructor-arg>
                   </bean>
         </property>
   </bean>
@@ -202,12 +193,6 @@
                   <bean class="com.buybig.service.implementations.OrderService">
                        <constructor-arg>
                           <ref bean="orderDAO"/>
-                        </constructor-arg>                        
-                         <constructor-arg>
-                          <ref bean="userDAO"/>
-                        </constructor-arg>
-                          <constructor-arg>
-                          <ref bean="userDAO"/>
                         </constructor-arg>
                   </bean>
         </property>

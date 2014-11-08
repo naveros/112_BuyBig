@@ -4,7 +4,8 @@ import java.sql.Timestamp;
 
 public class Order extends DTO{
 	private static final long serialVersionUID = 1L;
-	
+	public final static String ID_USER_COLUMN_NAME = "idUser";
+	public static final String ID_BOOK_COLUMN_NAME = "idBook";
 	private String idOrder;
 	private Timestamp dateAdded;
 	private User user;

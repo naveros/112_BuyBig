@@ -1,62 +1,88 @@
 package com.buybig.dto;
 
-import java.util.List;
+import java.util.Set;
 
 public class Book {
 	
-	
-	
-	private String ISBN;
-	private String name;
-	private List<String> author;
-	private double prix;
-	
+	private String idbook;	
+	private String title;
+	private String author;
+	private String isbn;
+	private double price;
+	Set<Purchase> purchases;
+	Set<Order> orders;
 	
 	public Book(){
 		
 		
 	}
-
-
-	public String getISBN() {
-		return ISBN;
+	public String getIdbook() {
+		return idbook;
 	}
 
 
-	public void setISBN(String iSBN) {
-		ISBN = iSBN;
+	public void setIdbook(String idbook) {
+		this.idbook = idbook;
 	}
 
 
-	public String getName() {
-		return name;
+	public String getIsbn() {
+		return isbn;
 	}
 
 
-	public void setName(String name) {
-		this.name = name;
+	public void setIsbn(String isbn) {
+		this.isbn = isbn;
 	}
 
 
-	public List<String> getAuthor() {
+	public String getTitle() {
+		return title;
+	}
+
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+
+	public String getAuthor() {
 		return author;
 	}
 
 
-	public void setAuthor(List<String> author) {
+	public void setAuthor(String author) {
 		this.author = author;
 	}
 
 
-	public double getPrix() {
-		return prix;
+	public double getPrice() {
+		return price;
 	}
 
 
-	public void setPrix(double prix) {
-		this.prix = prix;
+	public void setPrice(double price) {
+		this.price = price;
 	}
 
-	
-	
+
+	public Set<Purchase> getPurchases() {
+		return purchases;
+	}
+
+
+	public void setPurchases(Set<Purchase> purchases) {
+		this.purchases = purchases;
+	}
+
+
+	public Set<Order> getOrders() {
+		return orders;
+	}
+
+
+	public void setOrders(Set<Order> orders) {
+		this.orders = orders;
+	}
+
 }

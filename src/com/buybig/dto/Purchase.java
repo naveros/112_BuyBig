@@ -4,13 +4,13 @@ import java.sql.Timestamp;
 
 public class Purchase {
 
+	private String idPurchase;
 	private Timestamp purchaseDate;
-	private Book book;
 	private User user;
+	private Book book;
 	
-
-
-
+	public Purchase(){}
+	
 	public Timestamp getPurchaseDate() {
 		return purchaseDate;
 	}
@@ -34,10 +34,5 @@ public class Purchase {
 	public void setUser(User user) {
 		this.user = user;
 	}
-
-	public Purchase(){}
-	
-	
-	
 	
 }

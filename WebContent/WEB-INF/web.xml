@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:jsp="http://java.sun.com/xml/ns/javaee/jsp" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <listener>
+    <listener-class>
+             com.buybig.listener.BuybigServletContextListener 
+        </listener-class>
+  </listener>
   <display-name>112_BuyBig</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
@@ -9,24 +14,19 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-
- <servlet>
-        <servlet-name>Shop</servlet-name>
-        <servlet-class>com.buybig.servlets.Shop</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>Shop</servlet-name>
-        <url-pattern>/Shop</url-pattern>
-          <url-pattern>/</url-pattern>
-    </servlet-mapping>
-
-    <jsp-config>
-        <jsp-property-group>
-            <url-pattern>*.jsp</url-pattern>
-            <include-prelude>/WEB-INF/taglibs.jsp</include-prelude>
-        </jsp-property-group>
-    </jsp-config>
-
-
-
+  <servlet>
+    <servlet-name>Shop</servlet-name>
+    <servlet-class>com.buybig.servlets.Shop</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Shop</servlet-name>
+    <url-pattern>/Shop</url-pattern>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+  <jsp-config>
+    <jsp-property-group>
+      <url-pattern>*.jsp</url-pattern>
+      <include-prelude>/WEB-INF/taglibs.jsp</include-prelude>
+    </jsp-property-group>
+  </jsp-config>
 </web-app>

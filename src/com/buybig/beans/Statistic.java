@@ -12,7 +12,7 @@ public class Statistic {
 	public int getNbSessions() {
 		return nbSessions;
 	}
-
+	
 	public void setNbSessions(int nbSessions) {
 		this.nbSessions = nbSessions;
 	}

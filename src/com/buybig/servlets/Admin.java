@@ -1,48 +1,40 @@
 package com.buybig.servlets;
 
 import java.io.IOException;
-
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.springframework.context.ApplicationContext;
-
-import com.buybig.beans.Statistic;
-
 /**
- * Servlet implementation class Shop
+ * Servlet implementation class Admin
  */
-//@WebServlet("/Shop")
-public class Shop extends HttpServlet {
+@WebServlet("/Admin")
+public class Admin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    private Statistic stats ;   
+       
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Shop() {
+    public Admin() {
         super();
         // TODO Auto-generated constructor stub
     }
-    @Override
-    public void init(ServletConfig config) throws ServletException {
-       super.init(config);
 
-       ApplicationContext ac = (ApplicationContext) config.getServletContext().getAttribute("applicationContext");
+	/**
+	 * @see Servlet#init(ServletConfig)
+	 */
+	public void init(ServletConfig config) throws ServletException {
+		// TODO Auto-generated method stub
+	}
 
-       this.stats = (Statistic)ac.getBean("statistique");
-       //this.apiLogger = (ApiLogger)ac.getBean("apiLogger");
-    }
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		 this.getServletContext().getRequestDispatcher("/WEB-INF/Shop.jsp").forward(request, response);
-		   
-		 
+		// TODO Auto-generated method stub
 	}
 
 	/**
@@ -50,8 +42,6 @@ public class Shop extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
-		
 	}
 
 }

@@ -223,7 +223,25 @@
                   </bean>
         </property>
   </bean>
-    
-
+   <!-- ========== beans Backbone ======================================================= --> 
+	<bean name="buybigManager"
+        parent="transactionProxy">
+        <property name="target">
+                  <bean class="com.buybig.util.BuybigBuilder">
+                       <constructor-arg>
+                          <ref bean="userService"/>
+                        </constructor-arg>                        
+                         <constructor-arg>
+                          <ref bean="bookService"/>
+                        </constructor-arg>
+                          <constructor-arg>
+                          <ref bean="purchaseService"/>
+                        </constructor-arg>
+                        <constructor-arg>
+                          <ref bean="orderService"/>
+                        </constructor-arg>
+                  </bean>
+        </property>
+  </bean>
  
 </beans>

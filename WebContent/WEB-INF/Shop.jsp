@@ -6,5 +6,15 @@
 </head>
 <body>
 Hello from jsp Shop
+
+<c:if test="${!empty BooksSexe}">
+
+		<c:forEach items = "${BooksSexe}" var="book" >
+		<p>	Livre  <c:out value="${book}"/>   </p> 
+		</c:forEach>
+		
+		
+</c:if>
+
 </body>
 </html>

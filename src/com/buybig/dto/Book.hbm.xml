@@ -7,7 +7,7 @@
 <hibernate-mapping>
 	<class name="com.buybig.dto.Book" table="BOOK">
 
-		<id name="idbook" type="string">
+		<id name="idBook" type="string">
 			<column name="IDBOOK">
 			</column>
 			<generator class="sequence">

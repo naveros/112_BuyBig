@@ -1,6 +1,7 @@
 package com.buybig.servlets;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -11,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.context.ApplicationContext;
 
 import com.buybig.beans.Statistic;
+import com.buybig.dto.Book;
 import com.buybig.util.BuybigBuilder;
 
 /**
@@ -40,6 +42,9 @@ public class Shop extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		List<Book> booksSexe = buybigManager.getCategoryByName("SEXE");
+		
+		request.setAttribute("BooksSexe", booksSexe);
 		 this.getServletContext().getRequestDispatcher("/WEB-INF/Shop.jsp").forward(request, response);
 		   
 		 

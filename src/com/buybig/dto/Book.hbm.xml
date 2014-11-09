@@ -34,6 +34,10 @@
 			<column name="CATEGORY">
 			</column>
 		</property>
+		<property name="onSale" type="string" length="100">
+			<column name="ONSALE">
+			</column>
+		</property>
 
 		<set name="purchases" order-by="PURCHASEDATE ASC" cascade="all">
 			<key>

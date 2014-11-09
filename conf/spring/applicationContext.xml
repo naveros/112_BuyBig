@@ -109,6 +109,7 @@
 	</bean>
 
 	<!-- ========== DAOs =========================================================== -->
+
 	<bean name="BookDAO" parent="transactionProxy">
 		<property name="target">
 			<bean class="com.buybig.dao.implementations.BookDAO">
@@ -118,6 +119,7 @@
 			</bean>
 		</property>
 	</bean>
+	
 	<bean name="userDAO" parent="transactionProxy">
 		<property name="target">
 			<bean class="com.buybig.dao.implementations.UserDAO">

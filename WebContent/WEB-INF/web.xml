@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:jsp="http://java.sun.com/xml/ns/javaee/jsp" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
-  <listener>
-    <listener-class>
-             com.buybig.listener.BuybigServletContextListener 
-        </listener-class>
-  </listener>
+ 
   <display-name>112_BuyBig</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
@@ -29,4 +25,9 @@
       <include-prelude>/WEB-INF/taglibs.jsp</include-prelude>
     </jsp-property-group>
   </jsp-config>
+   <listener>
+    <listener-class>
+             com.buybig.listener.BuybigServletContextListener 
+        </listener-class>
+  </listener>
 </web-app>

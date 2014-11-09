@@ -16,8 +16,8 @@ import com.buybig.exceptions.InvalidSortByPropertyException;
 
 public class PurchaseDAO extends DAO {
 
-	PurchaseDAO(Class<Purchase> pretDTOClass) throws InvalidDTOClassException {
-		super(pretDTOClass);
+	PurchaseDAO() throws InvalidDTOClassException {
+		super(Purchase.class);
 	}
 
 	@SuppressWarnings("unchecked")

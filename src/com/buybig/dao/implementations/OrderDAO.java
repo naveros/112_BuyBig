@@ -13,8 +13,8 @@ import com.buybig.exceptions.InvalidHibernateSessionException;
 import com.buybig.exceptions.InvalidSortByPropertyException;
 public class OrderDAO extends DAO {
     
-    OrderDAO(Class<Order> orderClass) throws InvalidDTOClassException {
-        super(orderClass);
+    OrderDAO() throws InvalidDTOClassException {
+        super(Order.class);
     }
 
     @SuppressWarnings("unchecked")

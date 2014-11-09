@@ -13,7 +13,7 @@ public class User extends DTO {
 	private String lastName;
 	private String firstName;
 	private String adresse;
-	private Timestamp birthDay;
+	private Timestamp birthDate;
 	private Set<Purchase> purchaseHistory;
 	private Set<Order> cart;
 
@@ -53,14 +53,6 @@ public class User extends DTO {
 		this.adresse = adresse;
 	}
 
-	public Timestamp getbirthDay() {
-		return birthDay;
-	}
-
-	public void Timestamp(java.sql.Timestamp birthDay) { // ??
-		this.birthDay = birthDay;
-	}
-
 	public Set<Purchase> getPurchaseHistory() {
 		return purchaseHistory;
 	}
@@ -83,6 +75,18 @@ public class User extends DTO {
 
 	public void setIdUser(String idUser) {
 		this.idUser = idUser;
+	}
+
+
+
+	public Timestamp getBirthDate() {
+		return birthDate;
+	}
+
+
+
+	public void setBirthDate(Timestamp birthDate) {
+		this.birthDate = birthDate;
 	}
 
 }

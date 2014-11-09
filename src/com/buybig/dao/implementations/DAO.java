@@ -26,13 +26,17 @@ public class DAO {
     private Class<?> dtoClass;
 
     protected DAO(Class<?> dtoClass) throws InvalidDTOClassException {
-        super();
+      // super();
         if(dtoClass == null) {
             throw new InvalidDTOClassException("La classe de DTO ne peut être null");
         }
         setDtoClass(dtoClass);
     }
 
+    public DAO(){
+    	
+    	
+    }
     // Region Getters and Setters
 
     protected Class<?> getDtoClass() {

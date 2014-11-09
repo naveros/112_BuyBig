@@ -14,9 +14,11 @@ import com.buybig.exceptions.InvalidSortByPropertyException;
 
 public class BookDAO extends DAO{
 
-	BookDAO(Class<Book> BookDTPCLass) throws InvalidDTOClassException{
-		super(BookDTPCLass);
+	BookDAO() throws InvalidDTOClassException{
+		super(Book.class);
+		//super(BookClass);
 	}
+
 	@SuppressWarnings("unchecked")
 	public List<Book> findByTitle(Session session,
 	        String username,

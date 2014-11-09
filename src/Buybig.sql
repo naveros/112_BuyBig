@@ -26,6 +26,7 @@ CREATE TABLE BOOK (IDBOOK         	NUMBER       CHECK (IDBOOK > 0),
                     AUTHOR          VARCHAR(100) NOT NULL,
                     PRICE           NUMBER    NOT NULL,
                     CATEGORY		VARCHAR(100) NOT NULL,
+                    ONSALE      VARCHAR(100) DEFAULT 'NO',
                     CONSTRAINT      PK_BOOK     PRIMARY KEY (IDBOOK));
 
 CREATE TABLE PURCHASE (IDPURCHASE     NUMBER     CHECK (IDPURCHASE > 0),

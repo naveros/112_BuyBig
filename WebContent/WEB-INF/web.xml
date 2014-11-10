@@ -25,9 +25,5 @@
       <include-prelude>/WEB-INF/taglibs.jsp</include-prelude>
     </jsp-property-group>
   </jsp-config>
-   <listener>
-    <listener-class>
-             com.buybig.listener.BuybigServletContextListener 
-        </listener-class>
-  </listener>
+  
 </web-app>

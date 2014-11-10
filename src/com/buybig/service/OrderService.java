@@ -21,7 +21,7 @@ import com.buybig.exceptions.ServiceException;
 
 public class OrderService {
 	    private OrderDAO orderDAO;
-	    OrderService(OrderDAO orderDAO) throws InvalidDAOException {
+	    public OrderService(OrderDAO orderDAO) throws InvalidDAOException {
 	        super();
 	        if(orderDAO == null) {
 	            throw new InvalidDAOException("Le DAO de réservation ne peut être null");

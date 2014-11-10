@@ -16,7 +16,7 @@ import com.buybig.exceptions.InvalidSortByPropertyException;
 
 public class PurchaseDAO extends DAO {
 
-	PurchaseDAO() throws InvalidDTOClassException {
+	public PurchaseDAO() throws InvalidDTOClassException {
 		super(Purchase.class);
 	}
 

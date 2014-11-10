@@ -19,7 +19,7 @@ import com.buybig.exceptions.ServiceException;
 public class UserService {
 	private UserDAO userDAO;
 
-	UserService(UserDAO userDAO) throws InvalidDAOException {
+	public UserService(UserDAO userDAO) throws InvalidDAOException {
 		super();
 		if (userDAO == null) {
 			throw new InvalidDAOException("Le DAO de user ne peut être null");

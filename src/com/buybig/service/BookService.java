@@ -29,7 +29,7 @@ public class BookService {
 
 	private BookDAO bookDAO;
 
-	BookService(BookDAO bookDAO) throws InvalidDAOException {
+	public BookService(BookDAO bookDAO) throws InvalidDAOException {
 		super();
 		if (bookDAO == null) {
 			throw new InvalidDAOException("Le DAO de user ne peut être null");

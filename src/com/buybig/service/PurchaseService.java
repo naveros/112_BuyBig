@@ -26,7 +26,7 @@ public class PurchaseService {
 
 	private PurchaseDAO purchaseDAO;
 
-	PurchaseService(PurchaseDAO purchaseDAO) throws InvalidDAOException {
+	public PurchaseService(PurchaseDAO purchaseDAO) throws InvalidDAOException {
 		super();
 		if (purchaseDAO == null) {
 			throw new InvalidDAOException("Le DAO de prêt ne peut être null");

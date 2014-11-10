@@ -14,7 +14,7 @@ import com.buybig.exceptions.InvalidHibernateSessionException;
 import com.buybig.exceptions.InvalidSortByPropertyException;
 
 public class UserDAO extends DAO{
-	UserDAO() throws InvalidDTOClassException{
+	public UserDAO() throws InvalidDTOClassException{
 		super(Book.class);
 	}
 	@SuppressWarnings("unchecked")

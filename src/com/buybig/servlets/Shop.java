@@ -33,9 +33,10 @@ public class Shop extends HttpServlet {
     @Override
     public void init(ServletConfig config) throws ServletException {
        super.init(config);
-       ApplicationContext ac = (ApplicationContext) config.getServletContext().getAttribute("applicationContext");
-       this.stats = (Statistic)ac.getBean("statistic");
-       this.buybigManager = (BuybigBuilder)ac.getBean("buybigManager");
+       //ApplicationContext ac = (ApplicationContext) config.getServletContext().getAttribute("applicationContext");
+       //this.stats = (Statistic)ac.getBean("statistic");
+       //this.buybigManager = (BuybigBuilder)ac.getBean("buybigManager");
+       //this.buybigManager = new BuybigBuilder();
     }
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)

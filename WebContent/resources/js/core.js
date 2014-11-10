@@ -1,16 +1,15 @@
 var tab_categories = [];
-var tab_librairie = {
-};
+var tab_librairie = [];
 var tab_panier = [];
 var total = 0;
 
 function init() {
     xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "servcatalogue", false);
+    xhttp.open("GET", "Catalogue", false);
     xhttp.send();
     xmlDoc = xhttp.responseXML;
 
-    tab_categories = xmlDoc.getElementsByTagName("categorie");
+    tab_categories = xmlDoc.getElementsByTagName("Categorie");
     for (i = 0;i < tab_categories.length;i++) {
         categorie = tab_categories[i].getAttribute('nom');
 
@@ -81,7 +80,7 @@ function livreToDiv(arg1) {
 function ajouterPanier(localLivre) {
     if (tab_panier.length < 8) {
         xhttp = new XMLHttpRequest();
-        xhttp.open("POST", "servpanier", false);
+        xhttp.open("POST", "Panier", false);
         xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         console.log(JSON.stringify(localLivre));
         xhttp.send(encodeURI("action=add&isbn=" + localLivre.isbn + "&titre=" + localLivre.titre + "&auteur=" + localLivre.auteur + "&prix=" + localLivre.prix));
@@ -94,7 +93,7 @@ function ajouterPanier(localLivre) {
 function enleverPanier(arg1) {
     var localLivre = tab_panier[arg1];
     xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "servpanier", false);
+    xhttp.open("POST", "Panier", false);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send(encodeURI("action=remove&isbn=" + localLivre.isbn + "&titre=" + localLivre.titre + "&auteur=" +localLivre.auteur + "&prix=" + localLivre.prix));
     updatePanier();
@@ -103,7 +102,7 @@ function enleverPanier(arg1) {
 
 function updatePanier() {
     xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "servpanier", false);
+    xhttp.open("GET", "Panier", false);
     xhttp.send();
     xmlDoc = xhttp.responseXML;
     tab_panier = [];

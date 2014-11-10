@@ -54,7 +54,7 @@ public class Shop extends HttpServlet {
 	        out.println("</body></html>");
 	        out.close();*/
 	    
-	        this.getServletContext().getRequestDispatcher("/WEB-INF/Shop.jsp").forward(request, response);
+	        this.getServletContext().getRequestDispatcher("/WEB-INF/index.jsp").forward(request, response);
 	}
 
 	/**

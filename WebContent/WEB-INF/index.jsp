@@ -1,9 +1,11 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252"/>
-        <link rel="stylesheet" type="text/css" href="resources/css/style.css"/>
-        <script type="text/javascript" src="resources/js/core.js" ></script>
+    <style type="text/css">
+<%@ include file="/resources/css/style.css" %>
+</style>
+<script type="text/javascript" src="resources/js/core.js"></script>
+
         <title>BuyBig</title>
     </head>
     <body onload="init()">
@@ -11,7 +13,7 @@
         <div id="selection">
             <label>Choisir une categorie</label>
              
-            <select id="liste" onchange="changerCategorie(this)">
+            <select id="liste" onchange="changerCategorie(this)">                                           
                 <option>Choisir...</option>
             </select>
         </div>

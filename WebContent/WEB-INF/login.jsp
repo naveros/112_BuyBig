@@ -27,7 +27,9 @@ YOOOOOOOOOOOOOOOOOOOOOOOOOOOO
    <jsp:getProperty name="sessionCounter"
                property="maxSessionCount" />.
 </UL>
-  <form method="POST" action="ServLogin">
+
+
+  <form method="POST" action="Login">
             Username :
             <input type="text" name="username"/>
             <br/>
@@ -36,7 +38,11 @@ YOOOOOOOOOOOOOOOOOOOOOOOOOOOO
             <br/>
             <input type="submit" value="Login"/>
         </form>
+  <c:if test="${ !empty erreurLogin }"><p style="color:red;"><c:out value="${ erreur }" /></p></c:if>
 
 
+<p>
+<a href="/112_BuyBig/Register">Vous n'êtes pas membre? Inscrivez-vous ! </a>
+</p>
 </body>
 </html>

@@ -45,7 +45,7 @@ public class Panier extends HttpServlet {
 
         String listePanierAchatsID = "panier";
 
-        if (session.isNew()) {
+        if (session.getAttribute("panier") == null) {
             panier = new ArrayList<Livre>();
             session.setAttribute("panier", panier);
         } else {

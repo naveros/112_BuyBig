@@ -29,7 +29,7 @@
     <servlet-name>Catalogue</servlet-name>
     <url-pattern>/Catalogue</url-pattern>
   </servlet-mapping>
-   <servlet>
+  <servlet>
     <servlet-name>Panier</servlet-name>
     <servlet-class>com.buybig.servlets.Panier</servlet-class>
   </servlet>
@@ -37,6 +37,27 @@
     <servlet-name>Panier</servlet-name>
     <url-pattern>/Panier</url-pattern>
   </servlet-mapping>
+  
+    <servlet>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>com.buybig.servlets.Login</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+  
+  
+    <servlet>
+    <servlet-name>Register</servlet-name>
+    <servlet-class>com.buybig.servlets.Register</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Register</servlet-name>
+    <url-pattern>/Register</url-pattern>
+  </servlet-mapping>
+  
+  
   <jsp-config>
     <jsp-property-group>
       <url-pattern>*.jsp</url-pattern>

@@ -1,6 +1,7 @@
 package com.buybig.servlets;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -9,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.buybig.dto.Livre;
 import com.buybig.util.Statistic;
 
 /**
@@ -36,7 +38,10 @@ public class Shop extends HttpServlet {
 
 		
 		 
-	       if (session.isNew()) {
+	       if (session.isNew() || session.getAttribute("username") == null) {
+	    	   ArrayList<Livre> panier  = new ArrayList<Livre>();
+	            session.setAttribute("panier", panier);
+	            
 	    	   this.getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
 	    	   System.out.println("session is new ");
 

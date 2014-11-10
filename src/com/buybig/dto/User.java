@@ -17,11 +17,22 @@ public class User {
     }
 
     public String getUsername() {
-        return username;
+        return this.username;
     }
 
     public String toXmlString() {
         return "<user username=\"" + this.username + "\" nom=\"" + nom + "\" prenom=\"" + this.prenom +
                "\" adresse=\"" + adresse + "\"pass=\"" + pass + "\"isAdmin=\"" + isAdmin + "\"></user>";
     }
+
+	public String getPassword() {
+		return this.pass;
+	}
+	public Boolean isAdmin(){
+		
+		if(this.isAdmin.equals("false"))
+			return false;
+		else
+			return true;
+	}
 }

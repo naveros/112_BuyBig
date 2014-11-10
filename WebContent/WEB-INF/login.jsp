@@ -5,9 +5,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-Hello from jsp Shop
-	
-	 <c:out value="${nbBooks}"/>   
-
+YOOOOOOOOOOOOOOOOOOOOOOOOOOOO
 </body>
 </html>

@@ -1,7 +1,6 @@
 package com.buybig.servlets;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -10,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.buybig.dto.Livre;
+import com.buybig.util.Statistic;
 
 /**
  * Servlet implementation class Shop
@@ -18,7 +17,8 @@ import com.buybig.dto.Livre;
 //@WebServlet("/Shop")
 public class Shop extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-   // private Statistic stats ; 
+    private Statistic stats ;
+    
 
 
     public Shop() {
@@ -34,6 +34,8 @@ public class Shop extends HttpServlet {
 	    
 		HttpSession session = request.getSession(true);
 
+		
+		 
 	       if (session.isNew()) {
 	    	   this.getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
 	    	   System.out.println("session is new ");

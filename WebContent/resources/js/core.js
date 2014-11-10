@@ -1,5 +1,6 @@
 var tab_categories = [];
-var tab_librairie = [];
+var tab_librairie = {
+};
 var tab_panier = [];
 var total = 0;
 
@@ -9,7 +10,7 @@ function init() {
     xhttp.send();
     xmlDoc = xhttp.responseXML;
 
-    tab_categories = xmlDoc.getElementsByTagName("Categorie");
+    tab_categories = xmlDoc.getElementsByTagName("categorie");
     for (i = 0;i < tab_categories.length;i++) {
         categorie = tab_categories[i].getAttribute('nom');
 
@@ -22,8 +23,9 @@ function init() {
             titre = livre[j].getAttribute('titre');
             auteur = livre[j].getAttribute('auteur');
             prix = livre[j].getAttribute('prix');
+            onSale = livre[j].getAttribute('onSale');
             tab_librairie[categorie][j] = {
-                "isbn" : isbn, "titre" : titre, "auteur" : auteur, "prix" : prix
+                "isbn" : isbn, "titre" : titre, "auteur" : auteur, "prix" : prix, "onSale" : onSale
             };
         }
     }
@@ -55,6 +57,8 @@ function livreToDiv(arg1) {
     auteur.className = "livre_auteur";
     var prix = document.createElement("span");
     prix.className = "livre_prix";
+    var onSale = document.createElement("span");
+    onSale.className = "onSale";
     var ajouter = document.createElement("input");
     livre.className = "livre";
     ajouter.setAttribute("type", "button");
@@ -69,10 +73,12 @@ function livreToDiv(arg1) {
     titre.appendChild(document.createTextNode(tmpLivre["titre"]));
     auteur.appendChild(document.createTextNode(tmpLivre["auteur"]));
     prix.appendChild(document.createTextNode(tmpLivre["prix"]));
+      onSale.appendChild(document.createTextNode(tmpLivre["onSale"]));
     livre.appendChild(image);
     livre.appendChild(titre);
     livre.appendChild(auteur);
     livre.appendChild(prix);
+    livre.appendChild(onSale);
     livre.appendChild(ajouter);
     return livre;
 }

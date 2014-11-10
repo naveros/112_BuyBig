@@ -27,7 +27,15 @@ YOOOOOOOOOOOOOOOOOOOOOOOOOOOO
    <jsp:getProperty name="sessionCounter"
                property="maxSessionCount" />.
 </UL>
-
+  <form method="POST" action="ServLogin">
+            Username :
+            <input type="text" name="username"/>
+            <br/>
+            Password :
+            <input type="password" name="password"/>
+            <br/>
+            <input type="submit" value="Login"/>
+        </form>
 
 
 </body>

@@ -11,9 +11,9 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.context.ApplicationContext;
 
-import com.buybig.beans.Statistic;
 import com.buybig.dto.Book;
-import com.buybig.util.BuybigBuilder;
+import com.nicetry.beans.Statistic;
+import com.nicetry.util.BuybigBuilder;
 
 /**
  * Servlet implementation class Shop
@@ -36,20 +36,20 @@ public class Shop extends HttpServlet {
        //ApplicationContext ac = (ApplicationContext) config.getServletContext().getAttribute("applicationContext");
        //this.stats = (Statistic)ac.getBean("statistic");
        //this.buybigManager = (BuybigBuilder)ac.getBean("buybigManager");
-       this.buybigManager = new BuybigBuilder();
+      // this.buybigManager = new BuybigBuilder();
     }
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		
-		//List<Book> booksSexe = buybigManager.getCategoryByName("SEXE");
-		
-		 //request.setAttribute("BooksSexe", booksSexe);
+		// List<Book> booksSexe = buybigManager.getCategoryByName("SEXE");
+		//Book book =  booksSexe.get(0);
+	//	int nbBooks = buybigManager.getNbBooks();
+	//	 request.setAttribute("nbBooks", nbBooks);
 		 this.getServletContext().getRequestDispatcher("/WEB-INF/Shop.jsp").forward(request, response);
-		   
-				 
+		 
+		 //JSP magic...
 	}
 
 	/**

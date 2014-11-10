@@ -1,0 +1,171 @@
+@charset "windows-1252";
+#catalogue{
+overflow: auto;
+height:420px;
+float:left;
+overflow-y:hidden;
+width:70%;
+margin: 5px;
+background-color:#E8E8E8 ;
+border: 5px solid #686868;
+border-radius: 15px;
+--moz-border-radius:15 px;
+}
+
+#panier{
+float:left;
+text-align:center;
+border:5px solid #686868 ;
+width: 25%;
+margin: 5px;
+border-radius: 15px;
+--moz-border-radius:15 px;
+
+}
+#tab_panier{
+border:solid 1 #999999;
+width:96%;
+font-family:verdana, arial, sans-serif;
+font-size:11;
+text-align:left;
+margin:5px;
+background-color:#EEEEEE;
+}
+#facture{
+height:100px;
+width: 90%;
+margin:5px;
+float:left;
+text-align:center;
+border:5px solid #686868;
+border-radius: 15px;
+--moz-border-radius:15 px;
+}
+.livre  {
+width: 150px;
+height: 350px;
+border:5px solid;
+margin:10px;
+float:left;
+text-align:center;
+padding-top:10px;
+padding-bottom:10px;
+padding-right:10px;
+padding-left:10px;
+background-color:#989898 ;
+text-align:center;
+border-radius: 15px;
+--moz-border-radius:15 px;
+}
+.livre:hover {
+-moz-transform: scale(1.05);
+-webkit-transform: scale(1.05)
+}
+.prix {
+
+}
+.iconlivre {
+width: 150px;
+height: 210px
+}
+.titre {
+    font-size: 1.4em;
+    font-weight: bold;
+	color: #004B91;
+}
+.payer {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+	background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+	background-color:#ededed;
+	-webkit-border-top-left-radius:6px;
+	-moz-border-radius-topleft:6px;
+	border-top-left-radius:6px;
+	-webkit-border-top-right-radius:6px;
+	-moz-border-radius-topright:6px;
+	border-top-right-radius:6px;
+	-webkit-border-bottom-right-radius:6px;
+	-moz-border-radius-bottomright:6px;
+	border-bottom-right-radius:6px;
+	-webkit-border-bottom-left-radius:6px;
+	-moz-border-radius-bottomleft:6px;
+	border-bottom-left-radius:6px;
+	text-indent:0;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	color:#777777;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	height:50px;
+	line-height:50px;
+	width:100px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #ffffff;
+}
+.payer:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
+	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
+	background-color:#dfdfdf;
+}.payer:active {
+	position:relative;
+	top:1px;
+}
+.ajouter {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+	background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+	background-color:#ededed;
+	-webkit-border-top-left-radius:24px;
+	-moz-border-radius-topleft:24px;
+	border-top-left-radius:24px;
+	-webkit-border-top-right-radius:24px;
+	-moz-border-radius-topright:24px;
+	border-top-right-radius:24px;
+	-webkit-border-bottom-right-radius:24px;
+	-moz-border-radius-bottomright:24px;
+	border-bottom-right-radius:24px;
+	-webkit-border-bottom-left-radius:24px;
+	-moz-border-radius-bottomleft:24px;
+	border-bottom-left-radius:24px;
+	text-indent:0;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	color:#777777;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	height:21px;
+	line-height:21px;
+	width:98px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #ffffff;
+}
+.ajouter:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
+	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
+	background-color:#dfdfdf;
+}.ajouter:active {
+	position:relative;
+	top:1px;
+}
+.deleteIcon{
+width: 20px;
+}
+span{
+display:block;
+}
+
+

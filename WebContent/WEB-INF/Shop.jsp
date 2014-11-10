@@ -6,6 +6,8 @@
 </head>
 <body>
 Hello from jsp Shop
+	
+	 <c:out value="${nbBooks}"/>   
 
 </body>
 </html>

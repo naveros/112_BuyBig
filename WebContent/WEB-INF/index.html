@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252"/>
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css"/>
+        <script type="text/javascript" src="resources/js/core.js" ></script>
+        <title>BuyBig</title>
+    </head>
+    <body onload="init()">
+        <h1 align="center">BuyBig</h1>
+        <div id="selection">
+            <label>Choisir une categorie</label>
+             
+            <select id="liste" onchange="changerCategorie(this)">
+                <option>Choisir...</option>
+            </select>
+        </div>
+        <div class="catalogue" id="catalogue">
+        <div></div>
+        </div>
+        <div class="panier" id="panier">
+            <h1>Panier</h1>
+            <table id="tab_panier">
+                <thead>
+                    <th>Titre</th>
+                    <th>Prix</th>
+                    <th width="30px"></th>
+                </thead>
+            </table>
+            <div id="facture">
+                <span id="sousTotal">SousTotal: 0$</span>
+                 
+                <span id="tps">Tps: 0$</span>
+                 
+                <span id="tvq">Tvq: 0$</span>
+                 
+                <span id="total">Total: 0$</span>
+            </div>
+            <input type="button" class="payer" value="Payer" onclick="checkout()"/>
+        </div>
+    </body>
+</html>

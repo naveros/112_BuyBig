@@ -1,7 +1,7 @@
 package com.buybig.servlets;
 
 import java.io.IOException;
-import java.util.List;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -9,9 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.springframework.context.ApplicationContext;
-
-import com.buybig.dto.Book;
 import com.nicetry.beans.Statistic;
 import com.nicetry.util.BuybigBuilder;
 
@@ -23,6 +20,8 @@ public class Shop extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     private Statistic stats ; 
     private BuybigBuilder buybigManager;
+    
+  //  private static final String CONTENT_TYPE = "text/html; charset=windows-1252"; ////////////////////////////////
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -47,9 +46,17 @@ public class Shop extends HttpServlet {
 		//Book book =  booksSexe.get(0);
 	//	int nbBooks = buybigManager.getNbBooks();
 	//	 request.setAttribute("nbBooks", nbBooks);
-		 this.getServletContext().getRequestDispatcher("/WEB-INF/Shop.jsp").forward(request, response);
-		 
-		 //JSP magic...
+		
+	 /*       response.setContentType(CONTENT_TYPE);
+	        PrintWriter out = response.getWriter();
+	        out.println("<html>");
+	        out.println("<head><title>ServletLab2</title></head>");
+	        out.println("<body>");
+	        out.println("<p>The servlet has received a POST. This is the reply.</p>");
+	        out.println("</body></html>");
+	        out.close();*/
+	    
+	        this.getServletContext().getRequestDispatcher("/WEB-INF/shop.jsp").forward(request, response);
 	}
 
 	/**

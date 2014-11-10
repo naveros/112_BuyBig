@@ -15,8 +15,8 @@ public class BuybigServletContextListener implements ServletContextListener {
         //Run this before web application is started
 	@Override
 	public void contextInitialized(ServletContextEvent sce) {
-        //ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
-        //sce.getServletContext().setAttribute("applicationContext", ac);
+        ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
+        sce.getServletContext().setAttribute("applicationContext", ac);
 		System.out.println("ServletContextListener Started");
     }
 }

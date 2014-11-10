@@ -36,19 +36,20 @@ public class Shop extends HttpServlet {
        //ApplicationContext ac = (ApplicationContext) config.getServletContext().getAttribute("applicationContext");
        //this.stats = (Statistic)ac.getBean("statistic");
        //this.buybigManager = (BuybigBuilder)ac.getBean("buybigManager");
-       //this.buybigManager = new BuybigBuilder();
+       this.buybigManager = new BuybigBuilder();
     }
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		List<Book> booksSexe = buybigManager.getCategoryByName("SEXE");
 		
-		request.setAttribute("BooksSexe", booksSexe);
+		//List<Book> booksSexe = buybigManager.getCategoryByName("SEXE");
+		
+		 //request.setAttribute("BooksSexe", booksSexe);
 		 this.getServletContext().getRequestDispatcher("/WEB-INF/Shop.jsp").forward(request, response);
 		   
-		 
+				 
 	}
 
 	/**

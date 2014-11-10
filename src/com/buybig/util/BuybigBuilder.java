@@ -43,7 +43,7 @@ public class BuybigBuilder {
 	public BuybigBuilder() {
 		try {
 			this.sessionFactory = (SessionFactory) BuybigBuilder.APPLICATION_CONTEXT
-					.getBean("sessionFcatory");
+					.getBean("sessionFactory");
 			this.userService = new UserService(new UserDAO());
 			this.bookService = new BookService(new BookDAO());
 			this.purchaseService = new PurchaseService(new PurchaseDAO());

@@ -1,7 +1,6 @@
 package com.buybig.servlets;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -9,8 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.nicetry.beans.Statistic;
-import com.nicetry.util.BuybigBuilder;
+import com.sun.org.glassfish.external.statistics.Statistic;
 
 /**
  * Servlet implementation class Shop
@@ -18,8 +16,7 @@ import com.nicetry.util.BuybigBuilder;
 //@WebServlet("/Shop")
 public class Shop extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    private Statistic stats ; 
-    private BuybigBuilder buybigManager;
+   // private Statistic stats ; 
     
   //  private static final String CONTENT_TYPE = "text/html; charset=windows-1252"; ////////////////////////////////
     /**
@@ -40,6 +37,7 @@ public class Shop extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
+	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		// List<Book> booksSexe = buybigManager.getCategoryByName("SEXE");
@@ -56,12 +54,13 @@ public class Shop extends HttpServlet {
 	        out.println("</body></html>");
 	        out.close();*/
 	    
-	        this.getServletContext().getRequestDispatcher("/WEB-INF/shop.jsp").forward(request, response);
+	        this.getServletContext().getRequestDispatcher("/WEB-INF/Shop.jsp").forward(request, response);
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		

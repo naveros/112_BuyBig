@@ -36,19 +36,21 @@ public class Panier extends HttpServlet {
         response.setContentType("text/xml");
         //response.setCharacterEncoding("UTF-8");
         PrintWriter out = response.getWriter();
-        String userID = "ABCD";
+       // String userID = "ABCD";
         String result = "<panier>";
         HttpSession session = request.getSession(true);
-        Date createTime = new Date(session.getCreationTime());
-        Date lastAccessTime = new Date(session.getLastAccessedTime());
+      //  Date createTime = new Date(session.getCreationTime());
+      //  Date lastAccessTime = new Date(session.getLastAccessedTime());
 
 
         String listePanierAchatsID = "panier";
 
         if (session.getAttribute("panier") == null) {
+        	System.out.println("Nouveau Pânier d'achat !! ");
             panier = new ArrayList<Livre>();
             session.setAttribute("panier", panier);
         } else {
+        	System.out.println("Reprise de l'ancien panier d'achat  ");
             panier = (ArrayList<Livre>) session.getAttribute("panier");
         }
         int count;

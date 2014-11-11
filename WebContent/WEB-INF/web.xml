@@ -47,8 +47,7 @@
     <url-pattern>/Login</url-pattern>
   </servlet-mapping>
   
-  
-    <servlet>
+      <servlet>
     <servlet-name>Register</servlet-name>
     <servlet-class>com.buybig.servlets.Register</servlet-class>
   </servlet>
@@ -57,6 +56,16 @@
     <url-pattern>/Register</url-pattern>
   </servlet-mapping>
   
+        <servlet>
+    <servlet-name>UserInfo</servlet-name>
+    <servlet-class>com.buybig.servlets.UserInfo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserInfo</servlet-name>
+    <url-pattern>/UserInfo</url-pattern>
+  </servlet-mapping>
+  
+
   
   <jsp-config>
     <jsp-property-group>

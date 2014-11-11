@@ -130,12 +130,16 @@ public class UserDAO {
 			System.out.println("SAVE USER FILE : "+file);
 			writer = new PrintWriter(file, "UTF-8");
 		
+			writer.println("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
+			System.out.println("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
 			writer.println("<users>");
-			
+			System.out.println("<users>");
 			for(int i=0; i < users.size(); i ++){
 				writer.println(users.elementAt(i).toXmlString());
+				System.out.println(users.elementAt(i).toXmlString());
 			}
 			writer.println("</users>");
+			System.out.println("</users>");
 			writer.close();
 			
 		} catch (FileNotFoundException | UnsupportedEncodingException e) {

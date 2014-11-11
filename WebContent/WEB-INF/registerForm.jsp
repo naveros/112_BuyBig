@@ -21,7 +21,7 @@
               Adresse :
             <input type="text" name="adresse"/>
             <br/>            
-            <input type="submit" value="Login"/>
+            <input type="submit" value="Register"/>
         </form>
         <c:if test="${ !empty erreurRegister }"><p style="color:red;"><c:out value="${ erreurRegister }" /></p></c:if>
 </body>

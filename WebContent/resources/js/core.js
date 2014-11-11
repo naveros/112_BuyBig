@@ -89,7 +89,7 @@ function ajouterPanier(localLivre) {
         xhttp.open("POST", "Panier", false);
         xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         console.log(JSON.stringify(localLivre));
-        xhttp.send(encodeURI("action=add&isbn=" + localLivre.isbn + "&titre=" + localLivre.titre + "&auteur=" + localLivre.auteur + "&prix=" + localLivre.prix));
+        xhttp.send(encodeURI("action=add&isbn=" + localLivre.isbn + "&titre=" + localLivre.titre + "&auteur=" + localLivre.auteur + "&prix=" + localLivre.prix + "&onSale=" + localLivre.onSale));
         updatePanier();
         updateFacture();
     }
@@ -101,7 +101,7 @@ function enleverPanier(arg1) {
     xhttp = new XMLHttpRequest();
     xhttp.open("POST", "Panier", false);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send(encodeURI("action=remove&isbn=" + localLivre.isbn + "&titre=" + localLivre.titre + "&auteur=" +localLivre.auteur + "&prix=" + localLivre.prix));
+    xhttp.send(encodeURI("action=remove&isbn=" + localLivre.isbn + "&titre=" + localLivre.titre + "&auteur=" +localLivre.auteur + "&prix=" + localLivre.prix + "&onSale=" + localLivre.onSale));
     updatePanier();
     updateFacture();
 }
@@ -119,8 +119,9 @@ function updatePanier() {
         var tmp_titre = tab_livre[i].getAttribute('titre');
         var tmp_auteur = tab_livre[i].getAttribute('auteur');
         var tmp_prix = tab_livre[i].getAttribute('prix');
+        var tmp_onSale = tab_livre[i].getAttribute('onSale');
         var tmp_livre = {
-            "isbn" : tmp_isbn, "titre" : tmp_titre, "auteur" : tmp_auteur, "prix" : tmp_prix
+            "isbn" : tmp_isbn, "titre" : tmp_titre, "auteur" : tmp_auteur, "prix" : tmp_prix, "onSale" : tmp_onSale
         };
         tab_panier.push(tmp_livre);
     }

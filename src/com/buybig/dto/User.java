@@ -21,8 +21,8 @@ public class User {
     }
 
     public String toXmlString() {
-        return "<user username=\"" + this.username + "\" nom=\"" + nom + "\" prenom=\"" + this.prenom +
-               "\" adresse=\"" + adresse + "\"pass=\"" + pass + "\"isAdmin=\"" + isAdmin + "\"></user>";
+        return "<user username=\"" + this.username + "\" nom=\"" + this.nom + "\" prenom=\"" + this.prenom +
+               "\" adresse=\"" + this.adresse + "\" pass=\"" + this.pass + "\" isAdmin=\"" + this.isAdmin+"\" "+" > </user>";
     }
 
 	public String getPassword() {

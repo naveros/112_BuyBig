@@ -48,11 +48,11 @@ public class UserInfo extends HttpServlet {
         String path = context.getRealPath("librairie.xml");
         File file = new File(path);
         xmlo = new XMLO(file);
-        
-		if (request.getParameter("operation") == "onSaleUpdate") {
+        System.out.println("operation ===="+ request.getParameter("operation"));
+		if (request.getParameter("operation").equals("onSaleUpdate")) {
 			System.out.println("OKK Change sale status");
 		
-			xmlo.setOnSaleStatus((String) request.getAttribute("isbnPromo"));
+			xmlo.setOnSaleStatus((String) request.getParameter("isbnPromo"));
 		}
 		if (request.getParameter("operation") == "onInfoUpdate") {
 

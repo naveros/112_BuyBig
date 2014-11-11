@@ -35,9 +35,15 @@ function init() {
 function changerCategorie(chooser) {
     var catalogue = document.getElementById("catalogue");
 
-    catalogue.removeChild(catalogue.firstChild);
-
+   // catalogue.removeChild(catalogue.firstChild);
+    catalogue.removeChild(catalogue.lastChild);////////////////////////////////////
+    while(catalogue.hasChildNodes()){
+    	
+    	 catalogue.removeChild(catalogue.lastChild);
+    	
+    }
     var tab_livre = tab_librairie[chooser.value];
+    
     slide = document.createElement("tr");
     for (i = 0;i < tab_livre.length;i++) {
         elem = document.createElement("td");

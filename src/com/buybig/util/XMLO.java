@@ -6,6 +6,9 @@ import com.buybig.dto.Livre;
 import com.buybig.dto.User;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.util.Vector;
 
 import javax.swing.JOptionPane;
@@ -73,40 +76,50 @@ public class XMLO {
         }
     }
 
-    public void setUsers() {
-        NodeList nList = doc.getElementsByTagName("user");
-        int count = nList.getLength();
-        for (int b = 0; b < count; b++) {
-            User user;
-            Node nNode = nList.item(b);
-            if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-                Element eElement = (Element) nNode;
-                String username = eElement.getAttribute("username");
-                String nom = eElement.getAttribute("nom");
-                String prenom = eElement.getAttribute("prenom");
-                String adresse = eElement.getAttribute("adresse");
-                String pass = eElement.getAttribute("pass");
-                String isAdmin = eElement.getAttribute("isAdmin");
-                Vector<Livre> tmpLivres = new Vector<Livre>();
-                NodeList nList2 = eElement.getElementsByTagName("livre");
-                //JOptionPane.showMessageDialog(null, "Nb element livre dans cat:"+nList2.getLength());
-                int count2 = nList2.getLength();
-                for (int c = 0; b < count2; c++) {
-                    Node nNode2 = nList2.item(b);
-                    if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-                        Element eElement2 = (Element) nNode2;
-                        String titre = eElement2.getAttribute("titre");
-                        String auteur = eElement2.getAttribute("auteur");
-                        String isbn = eElement2.getAttribute("isbn");
-                        double prix = Double.parseDouble(eElement2.getAttribute("prix"));
-                        String onSale = eElement2.getAttribute("onSale");
-                        Livre livre = new Livre(titre, auteur, isbn, prix, onSale);
-                        tmpLivres.add(livre);
-                    }
-                }
-                user = new User(username, prenom, nom, adresse, pass, isAdmin,tmpLivres);
-                users.add(user);
-            }
-        }
-    }
+
+	public void saveCategories(){
+		   System.out.println("function saveCATEGORIES");
+		PrintWriter writer;
+		try {
+			System.out.println("SAVE USER FILE : "+file);
+			writer = new PrintWriter(file, "UTF-8");
+		
+			writer.println("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
+			System.out.println("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
+			writer.println("<librairie>");
+			System.out.println("<librairie>");
+			for(int i=0; i < categories.size(); i ++){
+				writer.println(categories.elementAt(i).toXmlString());
+				System.out.println(categories.elementAt(i).toXmlString());
+			}
+			writer.println("</librairie>");
+			System.out.println("</librairie>");
+			writer.close();
+			
+		} catch (FileNotFoundException | UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	}
+   public void setOnSaleStatus(String isbn){
+	   System.out.println("function SetOnSaleStatus");
+		for (int i = 0; i < categories.size(); i++) {
+
+			for (int y = 0; y < categories.elementAt(i).getLivres().size(); y++) {
+
+				if  (categories.elementAt(i).getLivres().elementAt(y).isbn == isbn) {
+					   System.out.println(categories.elementAt(i).getLivres().elementAt(y).isbn);
+					if(categories.elementAt(i).getLivres().elementAt(y).onSale == "true")
+						categories.elementAt(i).getLivres().elementAt(y).onSale ="false";
+					else
+						categories.elementAt(i).getLivres().elementAt(y).onSale = "true";
+				}
+
+			}
+		}
+	   
+		saveCategories();
+   }
 }

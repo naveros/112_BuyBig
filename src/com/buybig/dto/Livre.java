@@ -2,10 +2,10 @@ package com.buybig.dto;
 
 
 public class Livre {
-	String titre, auteur;
-    String isbn;
-    double prix;
-    String onSale;
+	public String titre, auteur;
+	public String isbn;
+	public  double prix;
+	public String onSale;
 
     public Livre(String titre, String auteur, String isbn, double prix, String onSale) {
         this.titre = titre;
@@ -15,7 +15,43 @@ public class Livre {
         this.onSale = onSale;
     }
 
-    public String getIsbn() {
+    public String getTitre() {
+		return titre;
+	}
+
+	public void setTitre(String titre) {
+		this.titre = titre;
+	}
+
+	public String getAuteur() {
+		return auteur;
+	}
+
+	public void setAuteur(String auteur) {
+		this.auteur = auteur;
+	}
+
+	public double getPrix() {
+		return prix;
+	}
+
+	public void setPrix(double prix) {
+		this.prix = prix;
+	}
+
+	public String getOnSale() {
+		return onSale;
+	}
+
+	public void setOnSale(String onSale) {
+		this.onSale = onSale;
+	}
+
+	public void setIsbn(String isbn) {
+		this.isbn = isbn;
+	}
+
+	public String getIsbn() {
         return isbn;
     }
 

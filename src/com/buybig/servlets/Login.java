@@ -9,57 +9,67 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.buybig.dao.UserDAO;
 
 /**
  * Servlet implementation class Login
  */
-//@WebServlet("/Login")
+// @WebServlet("/Login")
 public class Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       UserDAO userDAO;
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public Login() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+	UserDAO userDAO;
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		this.getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+	public Login() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		   
-        ServletContext context = getServletContext();
-        String path = context.getRealPath("users.xml");
-        File file = new File(path);
-	    //	System.out.println("DO POST LOGIN : FILE USER: "+ file + "   pathP:" +path);
+	protected void doGet(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+		this.getServletContext().getRequestDispatcher("/WEB-INF/login.jsp")
+				.forward(request, response);
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+
+		ServletContext context = getServletContext();
+		String path = context.getRealPath("users.xml");
+		File file = new File(path);
 		userDAO = new UserDAO(file);
-		
+
 		String username = request.getParameter("username");
 		String pass = request.getParameter("password");
-		System.out.println(username+ " " +pass);
-		
-		if(userDAO.testLogin(username, pass)){
-			request.setAttribute("username", username);
-			request.setAttribute("isAdmin", userDAO.isAdmin(username));
-			System.out.println("LOGIN OKK");
-
-			this.getServletContext().getRequestDispatcher("/WEB-INF/index.jsp").forward(request, response);
+		HttpSession session = request.getSession(true);
+		if (userDAO.testLogin(username, pass)) {
+			session.setAttribute("isAdmin", userDAO.isAdmin(username));
 			
-		}else{
+			session.setAttribute("LivresUser",userDAO.getLivresAchete(username) );
+		
+			System.out.println("le loggin est correct ! ");
+			
+			this.getServletContext().getRequestDispatcher("/WEB-INF/index.jsp")
+					.forward(request, response);
+
+		} else {
 			System.out.println("LOGIN incorrect");
-			 request.setAttribute("erreurLogin", "Login ou Mot de passe invalide");
-				this.getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+			request.setAttribute("erreurLogin",
+					"Login ou Mot de passe invalide");
+			this.getServletContext().getRequestDispatcher("/WEB-INF/login.jsp")
+					.forward(request, response);
 		}
 
 	}

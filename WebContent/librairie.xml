@@ -3,13 +3,13 @@
 	<categorie nom="Affaires">
 		<livre isbn="9782761931342" titre="Réfléchissez et devenez riche" auteur="Napoleon Hill" prix=" 24.95" onSale="false"></livre>
 		<livre isbn="9782894725870" titre="Contagion" auteur="Jonah Berger" prix="29.95" onSale="false"></livre>
-		<livre isbn="9782892254747" titre="Père riche, père pauvre : La suite" auteur="Robert T. Kiyosaki " prix="24.95" onSale="false" ></livre>
+		<livre isbn="9782892254747" titre="Père riche, père pauvre : La suite" auteur="Robert T. Kiyosaki " prix="24.95" onSale="true" ></livre>
 		<livre isbn="9782764019900" titre="Investir à la bourse et s'enrichir" auteur="Bernard Mooney" prix="29.95" onSale="false"></livre>
 		<livre isbn="9782754015882" titre="Bourse pour les nuls" auteur="Collectif" prix="34.95" onSale="false"></livre>
 	</categorie>
 	<categorie nom="Cuisine">
 		<livre isbn="9782761939874" titre="Étonnantes céréales" auteur="Ghillie James" prix="29.95" onSale="false"></livre>
-		<livre isbn="9782761939881" titre="La Cuisine de la ferme" auteur="Sarah Mayer" prix="29.95" onSale="false"></livre>
+		<livre isbn="9782761939881" titre="La Cuisine de la ferme" auteur="Sarah Mayer" prix="29.95" onSale="true"></livre>
 		<livre isbn="9782924155806" titre="Cuisinier rebelle en feu" auteur="Antoine Sicotte" prix="34.95" onSale="false"></livre>
 		<livre isbn="9782761926188" titre="La Bible du barbecue" auteur="Steven Raichlen" prix="34.95" onSale="false"></livre>
 		<livre isbn="9782501087223" titre="Le Grand livre des grillades" auteur="Rachel Lane" prix="23.95" onSale="false"></livre>
@@ -20,10 +20,10 @@
 		<livre isbn="9782754047159" titre="Le Décodeur de fifty shades of grey" auteur="Ana De Lis" prix="11.95" onSale="false"></livre>
 		<livre isbn="9782290069288" titre="La Bible du sexe" auteur="Cathy Winks, Anne Semans" prix="17.95" onSale="false"></livre>
 		<livre isbn="9782890925397" titre="Mangez mieux, bandez mieux" auteur="Alain Samson" prix="14.95" onSale="false"></livre>
-		<livre isbn="9782359331448" titre="Le Kama sutra en 200 positions" auteur="Collectif" prix="17.95" onSale="false"></livre>
+		<livre isbn="9782359331448" titre="Le Kama sutra en 200 positions" auteur="Collectif" prix="17.95" onSale="true"></livre>
 	</categorie>
 	<categorie nom="Santé">
-		<livre isbn="9782924402009" titre="La Vérité sur les médicaments" auteur="Mikkel Borch-jacobsen" prix="27.95" onSale="false"></livre>
+		<livre isbn="9782924402009" titre="La Vérité sur les médicaments" auteur="Mikkel Borch-jacobsen" prix="27.95" onSale="true"></livre>
 		<livre isbn="9782890448636" titre="En pyjama avec bouddha" auteur="Joseph Emet" prix="19.95" onSale="false"></livre>
 		<livre isbn="9782761940573" titre="La Cigarette électronique" auteur="Philippe Presles" prix="19.95" onSale="false"></livre>
 		<livre isbn="9782923335254" titre="Par amour du stress" auteur="Sonia Lupien" prix="25.95" onSale="false"></livre>

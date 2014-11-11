@@ -60,8 +60,8 @@ public class UserDAO {
 				// JOptionPane.showMessageDialog(null,
 				// "Nb element livre dans cat:"+nList2.getLength());
 				int count2 = nList2.getLength();
-				for (int c = 0; b < count2; c++) {
-					Node nNode2 = nList2.item(b);
+				for (int c = 0; c < count2; c++) {
+					Node nNode2 = nList2.item(c);
 					if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 						Element eElement2 = (Element) nNode2;
 						String titre = eElement2.getAttribute("titre");
@@ -154,5 +154,20 @@ public class UserDAO {
 		return true;
 	
 		return false;
+	}
+	public Vector<Livre> getLivresAchete(String username){
+		 Vector<Livre> temp = new  Vector<Livre>();
+		for (int i = 0; i < users.size(); i++) {
+
+			if (users.elementAt(i).getUsername().equals(username)) {
+
+				temp  = users.elementAt(i).getLivresAchete();
+			}
+
+		}
+		
+		
+		return temp;
+		
 	}
 }

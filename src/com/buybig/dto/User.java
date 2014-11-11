@@ -29,10 +29,16 @@ public class User {
 		return this.pass;
 	}
 	public Boolean isAdmin(){
-		
-		if(this.isAdmin.equals("false"))
-			return false;
-		else
-			return true;
+		Boolean result = false;
+		if(this.isAdmin.equals("true")){
+			result = true;
+		}		
+		return result;
 	}
+	public Vector<Livre> getLivresAchete (){
+		
+		return this.livresAchete;
+		
+	}
+
 }

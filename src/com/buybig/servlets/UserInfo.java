@@ -1,39 +1,67 @@
 package com.buybig.servlets;
 
+import java.io.File;
 import java.io.IOException;
+
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.buybig.util.XMLO;
+
 /**
  * Servlet implementation class UserInfo
  */
-//@WebServlet("/UserInfo")
+// @WebServlet("/UserInfo")
 public class UserInfo extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public UserInfo() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-
+	XMLO xmlo;
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+	public UserInfo() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+	protected void doGet(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+
+		this.getServletContext().getRequestDispatcher("/WEB-INF/userInfo.jsp")
+				.forward(request, response);
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+		
+        ServletContext context = getServletContext();
+        String path = context.getRealPath("librairie.xml");
+        File file = new File(path);
+        xmlo = new XMLO(file);
+        
+		if (request.getParameter("operation") == "onSaleUpdate") {
+			System.out.println("OKK Change sale status");
+		
+			xmlo.setOnSaleStatus((String) request.getAttribute("isbnPromo"));
+		}
+		if (request.getParameter("operation") == "onInfoUpdate") {
+
+	//TODO : 
+			
+		}
+
+		this.getServletContext().getRequestDispatcher("/WEB-INF/index.jsp")
+				.forward(request, response);
 	}
 
 }

@@ -10,7 +10,7 @@
     </head>
     <body onload="init()">
         <h1 align="center">BuyBig</h1>
-        <div class="navbar"> <ul class="nav"> <li> <a href="112_BuyBig/UserInfo">Compte</a> </li></ul> </div>
+        <ul > <li> <a href="/112_BuyBig/UserInfo">Compte </a> </li></ul>
         
         <div id="selection">
             <label>Choisir une categorie</label>

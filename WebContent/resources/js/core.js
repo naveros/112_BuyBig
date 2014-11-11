@@ -41,6 +41,7 @@ function changerCategorie(chooser) {
     slide = document.createElement("tr");
     for (i = 0;i < tab_livre.length;i++) {
         elem = document.createElement("td");
+        
         elem.appendChild(livreToDiv(tab_livre[i]));
         slide.appendChild(elem);
     }
@@ -57,29 +58,32 @@ function livreToDiv(arg1) {
     auteur.className = "livre_auteur";
     var prix = document.createElement("span");
     prix.className = "livre_prix";
-    var onSale = document.createElement("span");
-    onSale.className = "onSale";
+
     var ajouter = document.createElement("input");
-    livre.className = "livre";
-    ajouter.setAttribute("type", "button");
+    if (tmpLivre["onSale"].length<5) {
+		livre.className = "livreSpecial";
+    }
+	else{
+		livre.className = "livre";
+	}
+	ajouter.setAttribute("type", "button");
     ajouter.setAttribute("value", "Ajouter");
     ajouter.className = "ajouter";
     ajouter.onclick = function () {
         ajouterPanier(tmpLivre);
-    };
+    };    	
     image.className = "iconlivre";
     image.setAttribute("src", "resources/images/livres/" + tmpLivre["isbn"] + ".jpg");
     titre.className = "titre";
     titre.appendChild(document.createTextNode(tmpLivre["titre"]));
     auteur.appendChild(document.createTextNode(tmpLivre["auteur"]));
     prix.appendChild(document.createTextNode(tmpLivre["prix"]));
-      onSale.appendChild(document.createTextNode(tmpLivre["onSale"]));
     livre.appendChild(image);
     livre.appendChild(titre);
     livre.appendChild(auteur);
     livre.appendChild(prix);
-    livre.appendChild(onSale);
     livre.appendChild(ajouter);
+
     return livre;
 }
 

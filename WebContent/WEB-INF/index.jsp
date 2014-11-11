@@ -4,14 +4,27 @@
     <style type="text/css">
 <%@ include file="/resources/css/style.css" %>
 </style>
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <script type="text/javascript" src="resources/js/core.js"></script>
 
         <title>BuyBig</title>
     </head>
     <body onload="init()">
-        <h1 align="center">BuyBig</h1>
-        <ul > <li> <a href="/112_BuyBig/UserInfo">Compte </a> </li></ul>
-        
+        <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Buybig</a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="Shop">Shop</a></li>
+        <li ><a href="UserInfo">Mon compte</a></li> 
+        <li><a href="#">Logout</a></li> 
+      </ul>
+    </div>
+  </div>
+</nav>        
         <div id="selection">
             <label>Choisir une categorie</label>
              

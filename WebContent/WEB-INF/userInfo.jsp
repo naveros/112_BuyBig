@@ -9,7 +9,22 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Mon Compte</title>
-<ul><li><a href="112_Buybig/Shop"></a></li></ul>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Buybig</a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li ><a href="Shop">Shop</a></li>
+        <li class="active"><a href="UserInfo">Mon compte</a></li> 
+        <li><a href="#">Logout</a></li> 
+      </ul>
+    </div>
+  </div>
+</nav>
+<ul><li><a href="112_Buybig/Shop">Shop</a></li></ul>
 <br/>
 <c:if test="${isAdmin}" var="res" scope="session">
 

@@ -23,6 +23,6 @@
             <br/>            
             <input type="submit" value="Login"/>
         </form>
-        <c:if test="${ !empty erreurRegister }"><p style="color:red;"><c:out value="${ erreur }" /></p></c:if>
+        <c:if test="${ !empty erreurRegister }"><p style="color:red;"><c:out value="${ erreurRegister }" /></p></c:if>
 </body>
 </html>

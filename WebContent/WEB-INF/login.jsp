@@ -38,7 +38,7 @@ YOOOOOOOOOOOOOOOOOOOOOOOOOOOO
             <br/>
             <input type="submit" value="Login"/>
         </form>
-  <c:if test="${ !empty erreurLogin }"><p style="color:red;"><c:out value="${ erreur }" /></p></c:if>
+  <c:if test="${ !empty erreurLogin }"><p style="color:red;"><c:out value="${ erreurLogin }" /></p></c:if>
 
 
 <p>

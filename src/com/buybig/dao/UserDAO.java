@@ -30,6 +30,8 @@ public class UserDAO {
 			this.dBuilder = DocumentBuilderFactory.newInstance()
 					.newDocumentBuilder();
 			doc = dBuilder.parse(file);
+			setUsers();
+			System.out.println("DAO INITIALISER ");
 		} catch (Exception e) {
 			e.printStackTrace();
 			JOptionPane.showMessageDialog(null,
@@ -41,6 +43,7 @@ public class UserDAO {
 	public void setUsers() {
 		NodeList nList = doc.getElementsByTagName("user");
 		int count = nList.getLength();
+		System.out.println("Nombre de user dans le fichier xml:  "+count);
 		for (int b = 0; b < count; b++) {
 			User user;
 			Node nNode = nList.item(b);
@@ -69,11 +72,13 @@ public class UserDAO {
 						String onSale = eElement2.getAttribute("onSale");
 						Livre livre = new Livre(titre, auteur, isbn, prix,
 								onSale);
+						System.out.println(livre.toXmlString());
 						tmpLivres.add(livre);
 					}
 				}
 				user = new User(username, prenom, nom, adresse, pass, isAdmin,
 						tmpLivres);
+				System.out.println(user.toXmlString());
 				users.add(user);
 			}
 		}
@@ -115,28 +120,28 @@ public class UserDAO {
 		}
 
 		return result;
+		//return true; 
 	}
 
 	public void saveUsers(){
 		
 		PrintWriter writer;
 		try {
-			System.out.println(file);
+			System.out.println("SAVE USER FILE : "+file);
 			writer = new PrintWriter(file, "UTF-8");
+		
 			writer.println("<users>");
 			
 			for(int i=0; i < users.size(); i ++){
 				writer.println(users.elementAt(i).toXmlString());
 			}
 			writer.println("</users>");
-			
+			writer.close();
 			
 		} catch (FileNotFoundException | UnsupportedEncodingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
-		this.users.elementAt(1).toXmlString();
 		
 		
 	}

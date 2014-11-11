@@ -42,7 +42,7 @@ public class Register extends HttpServlet {
 		
 		UserDAO userDAO;
 		ServletContext context = getServletContext();
-		String path = context.getRealPath("librairie.xml");
+		String path = context.getRealPath("users.xml");
 	        File file = new File(path);
 		userDAO = new UserDAO(file);
 		

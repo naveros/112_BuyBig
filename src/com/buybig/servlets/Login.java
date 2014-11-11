@@ -39,13 +39,15 @@ public class Login extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		   
-		ServletContext context = getServletContext();
-		String path = context.getRealPath("librairie.xml");
-	        File file = new File(path);
+        ServletContext context = getServletContext();
+        String path = context.getRealPath("users.xml");
+        File file = new File(path);
+	    //	System.out.println("DO POST LOGIN : FILE USER: "+ file + "   pathP:" +path);
 		userDAO = new UserDAO(file);
 		
 		String username = request.getParameter("username");
 		String pass = request.getParameter("password");
+		System.out.println(username+ " " +pass);
 		
 		if(userDAO.testLogin(username, pass)){
 			request.setAttribute("username", username);

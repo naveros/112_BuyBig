@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <users>
-	<user username="boss" prenom="Jean" nom="Leloup" adresse=" cegep ahuntsic"
+	<user username="boss" prenom="Jean" nom="Leloup" adresse="cegep ahuntsic"
 		pass="123" isAdmin="true"></user>
-	<user username="notBoss" prenom="Arthur" nom="leChien" adresse=" cegep ahuntsic"
+	<user username="notBoss" prenom="Arthur" nom="leChien" adresse="cegep ahuntsic"
 		pass="123" isAdmin="false"></user>
 </users>
